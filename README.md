@@ -32,3 +32,9 @@ The goal is to generate a **Sawtooth waveform** by incrementally outputting digi
 | Control Register  | Set to `80H` (Port A as output)        |
 
 ---
+
+## How to use
+
+Write your code in emu8086 and create .com file
+Right click on 8086 in proteus and choose .com file that has been created from emu8086
+---
