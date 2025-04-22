@@ -26,31 +26,9 @@ The goal is to generate a **Sawtooth waveform** by incrementally outputting digi
 | Component         | Connection                             |
 |-------------------|----------------------------------------|
 | Port A (8255)     | Connected to DAC0808 digital inputs    |
-| Vref+ (DAC0808)   | +25V                                   |
-| Vref− (DAC0808)   | −25V                                   |
+| Vref+ (DAC0808)   | +5V                                    |
+| Vref− (DAC0808)   | −15V                                   |
 | DAC Output        | Connected to Oscilloscope Channel A    |
-| Control Register  | Set to `10000000B` (Port A as output)  |
+| Control Register  | Set to `80H` (Port A as output)        |
 
 ---
-
-## 🧾 Assembly Code (ASM)
-
-```asm
-PORTA EQU 00H
-Config EQU 06H
-
-ORG 100H
-MOV DX, Config
-MOV AL, 10000000B
-OUT DX, AL
-
-START:
-  MOV AL, 00000000B
-  MOV DX, PORTA
-j1:
-  OUT DX, AL
-  INC AL
-  CMP AL, 0FFH
-  JNZ j1
-
-JMP START
