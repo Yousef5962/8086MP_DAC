@@ -1,0 +1,32 @@
+CODE SEGMENT
+PORTA EQU 00H
+Config EQU 06H
+ORG 0
+MOV DX, Config
+MOV AL, 80H
+OUT DX, AL
+MOV DX, PORTA
+;PUT YOUR CODE HERE
+START:  MOV AL, 00H
+
+j1:     OUT DX, AL
+INC AL
+CMP AL, 0FFH
+JNZ j1
+
+MOV AL, 0
+OUT DX, AL
+MOV CL, 0FFH
+LOOP $
+JMP START
+CODE ENDS
+END
+
+
+
+
+
+
+
+
+; [SOURCE]: C:\Users\yalaa\OneDrive\Desktop\8086-Microprocessor-master\02_Displaying_the_given_binary_number_on_7SEG_using_8255\main.asm
