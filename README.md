@@ -29,7 +29,7 @@ The goal is to generate a **Sawtooth waveform** by incrementally outputting digi
 | Vref+ (DAC0808)   | +5V                                    |
 | Vref− (DAC0808)   | −15V                                   |
 | DAC Output        | Connected to Oscilloscope Channel A    |
-| Control Register  | Set to `80H` (Port A as output) `90H` (Port B as output)|
+| Control Register  | Set to `80H` (Ports A,B,C are outputs) |
 
 ---
 
