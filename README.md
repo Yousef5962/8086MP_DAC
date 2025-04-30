@@ -35,6 +35,7 @@ The goal is to generate a **Sawtooth waveform** by incrementally outputting digi
 
 ## How to use
 
-Write your code in emu8086 and create a .com file.  
-Right-click on 8086 in Proteus and choose the .com file that has been created from emu8086.  
+Write your code using emu8086 and create a .com file.  
+Right-click on 8086 in Proteus and choose the .com file that has been created from emu8086.   
+For address ports you'll found it in examples.
 ---
